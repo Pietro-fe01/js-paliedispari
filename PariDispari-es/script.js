@@ -4,3 +4,45 @@ Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzion
 Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto. */
+
+/*----------------
+    FUNZIONE
+----------------*/
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+function sommaNums(numOne, numTwo){
+    return numOne + numTwo;
+}
+
+function ifPari(num){
+    if(num % 2 == 0){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/*----------------
+    MAIN
+----------------*/
+const sceltaPariDispari = prompt("Scegli Pari o Dispari?");
+console.log(`Hai scelto di giocare ${sceltaPariDispari}`);
+
+const  sceltaNumero = Number(prompt("Adesso scegli un numero da 1 a 5"));
+console.log("Tu hai scelto " + sceltaNumero);
+
+const sceltaNumeroCPU = getRndInteger(1, 5);
+console.log("Il computer ha scelto " + sceltaNumeroCPU);
+
+const tot = sommaNums(sceltaNumero, sceltaNumeroCPU);
+
+if (ifPari(tot) === true && sceltaPariDispari === "pari"){
+    console.log("Hai vinto!");
+} else if (ifPari(tot) === false && sceltaPariDispari === "dispari"){
+    console.log("Hai vinto!");
+} else {
+    console.log("Hai perso!");
+}
+
