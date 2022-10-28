@@ -27,16 +27,34 @@ function ifPari(num){
 /*----------------
     MAIN
 ----------------*/
-const sceltaPariDispari = prompt("Scegli Pari o Dispari?");
+let sceltaPariDispari = prompt("Scegli Pari o Dispari.");
+
+while (sceltaPariDispari.toLocaleLowerCase() != "pari" && sceltaPariDispari.toLocaleLowerCase() != "dispari") {
+    sceltaPariDispari = prompt("Attenzione! Scegli Pari o Dispari!");
+}
+
 console.log(`Hai scelto di giocare ${sceltaPariDispari}`);
 
-const  sceltaNumero = Number(prompt("Adesso scegli un numero da 1 a 5"));
-console.log("Tu hai scelto " + sceltaNumero);
+// ----
+
+let sceltaNumero = Number(prompt("Adesso scegli un numero da 1 a 5"));
+
+while (sceltaNumero < 1 || sceltaNumero > 5) {
+    sceltaNumero = Number(prompt("Attenzione! Devi scegliere un numero tra 1 a 5!"));
+}
+
+console.log(`Tu hai scelto ${sceltaNumero}`);
+
+// ----
 
 const sceltaNumeroCPU = getRndInteger(1, 5);
-console.log("Il computer ha scelto " + sceltaNumeroCPU);
+console.log(`Il computer ha scelto ${sceltaNumeroCPU}`);
+
+// ----
 
 const tot = sommaNums(sceltaNumero, sceltaNumeroCPU);
+console.log(`Il totale è ${tot}`)
+// ----
 
 if (ifPari(tot) === true && sceltaPariDispari === "pari"){
     console.log("Hai vinto!");
@@ -46,3 +64,4 @@ if (ifPari(tot) === true && sceltaPariDispari === "pari"){
     console.log("Hai perso!");
 }
 
+// ----
