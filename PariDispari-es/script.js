@@ -37,7 +37,11 @@ while (sceltaPariDispari.toLocaleLowerCase() != "pari" && sceltaPariDispari.toLo
     sceltaPariDispari = prompt("Attenzione! Scegli Pari o Dispari!");
 }
 
-console.log(`Hai scelto di giocare ${sceltaPariDispari}`);
+if (sceltaPariDispari === "pari"){
+    console.log(`Hai scelto di giocare Pari.`);
+} else {
+    console.log(`Hai scelto di giocare Dispari.`);
+}
 
 // ---- USER SCEGLIE UN NUMERO DA 1 A 5 E CONTROLLO CHE NON INSERISCA ALTRI VALORI ----
 
