@@ -33,11 +33,11 @@ function ifPari(num){
 // ---- USER SCEGLIE PARI E DISPARI E PUO' SCEGLIERE SOLO QUESTI DUE VALORI ----
 let sceltaPariDispari = prompt("Scegli Pari o Dispari.");
 
-while (sceltaPariDispari.toLocaleLowerCase() != "pari" && sceltaPariDispari.toLocaleLowerCase() != "dispari") {
+while (sceltaPariDispari.toLowerCase() != "pari" && sceltaPariDispari.toLowerCase() != "dispari") {
     sceltaPariDispari = prompt("Attenzione! Scegli Pari o Dispari!");
 }
 
-if (sceltaPariDispari === "pari"){
+if (sceltaPariDispari.toLowerCase() === "pari"){
     console.log(`Hai scelto di giocare Pari.`);
 } else {
     console.log(`Hai scelto di giocare Dispari.`);
