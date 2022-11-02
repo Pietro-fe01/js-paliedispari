@@ -5,12 +5,12 @@ Creare una funzione per capire se la parola inserita è palindroma */
 /*----------------
     FUNZIONE
 ----------------*/
-function ifPalindroma(userWord){
-    let parola = "";
-    for (let i = userWord.length - 1; i >=  0; i--){
-        parola += userWord[i];
+function ifPalindroma(word){
+    let reversed = "";
+    for (let i = word.length - 1; i >=  0; i--){
+        reversed += word[i];
     }
-    if( userWord.toLowerCase() === parola.toLowerCase()){
+    if( word.toLowerCase() === reversed.toLowerCase()){
         return true;
     }
     return false;

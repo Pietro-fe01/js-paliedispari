@@ -22,9 +22,8 @@ function sommaNums(numOne, numTwo){
 function ifPari(num){
     if(num % 2 == 0){
         return true;
-    } else {
-        return false;
     }
+    return false;
 }
 
 /*----------------
@@ -66,9 +65,7 @@ console.log(`Il totale è ${tot}`)
 // ---- LA FUNZIONE IFPARI CONTROLLA SE IL TOTALE DELLA SOMMA E' PARI O DISPARI E IN BASE AGLI IF STAMPA
 // IL MESSAGGIO DI VINCITA O DI PERDITA ----
 
-if (ifPari(tot) === true && sceltaPariDispari === "pari"){
-    console.log("Hai vinto!");
-} else if (ifPari(tot) === false && sceltaPariDispari === "dispari"){
+if ((ifPari(tot) === true && sceltaPariDispari === "pari") || (ifPari(tot) === false && sceltaPariDispari === "dispari")){
     console.log("Hai vinto!");
 } else {
     console.log("Hai perso!");
